@@ -12,7 +12,7 @@
 </head>
 <?php
 require 'data/db-connect.php'; ?>
-<?php 
+<?php
 $query1 = "SELECT * FROM citation ORDER BY RAND() LIMIT 1";
 $resultcit = $dbh->query($query1);
 ?>
@@ -21,11 +21,11 @@ $resultcit = $dbh->query($query1);
 if ($resultcit->rowCount() > 0) {
     while ($row = $resultcit->fetch(PDO::FETCH_ASSOC)) {
 ?>
-    <div class="box">
-        <a href="acceuil.php"><?= $row['content'] ?></a>
-        <h2>- <?= $row['name'] ?></h2>
-    </div>
-    <div class="background"></div>
+        <div class="box">
+            <a href="/acceuil.php"><?= $row['content'] ?></a>
+            <h2>- <?= $row['name'] ?></h2>
+        </div>
+        <div class="background"></div>
 <?php
     }
 }
