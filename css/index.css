@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFE8d6;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: 27px;
+}
+
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg,#FFE8d6, #cb997e);
+    padding: 30px;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.box::before, .box::after {
+    position: absolute;
+    font-size: 120px;
+    opacity: .2;
+
+}
+
+.box::before {
+    content: '\201C';
+    top: -20px;
+    left: 5px;
+
+}
+
+.box::after {
+    content: '\201D';
+    bottom: 0;
+    right: 5px;
+}
+
+.box p {
+    margin-top: 1rem;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.box h2 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.box:hover {
+    color: black;
+    box-shadow: 20px 50px 100px rgba(0, 0, 0, .5);
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.box:hover, .box:hover ~ .background {
+    color: #FFE8d6;
+    opacity: 1;
+    background: #a5a58d;
+    background: linear-gradient(45deg, #6b705c 15%, #cb997e);
+}
+

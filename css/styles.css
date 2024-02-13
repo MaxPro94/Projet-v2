@@ -1,0 +1,11 @@
+body {
+    background-color: #c3baaa;
+}
+
+.card-text {
+    font-weight: 500;
+}
+
+.auteur {
+    font-style: italic;
+}
